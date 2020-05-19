@@ -1,4 +1,4 @@
-<h1><%= @user.id ? @user.first_name : "Add New User"%></h1>
+<h1><%= @user.id ? @user.full_name : "Add New User"%></h1>
 
 <%= form_for @user do |user|%>
 
@@ -21,7 +21,7 @@
   <%= user.text_field :gender %>
 
   <%= user.label :alive %>
-  <%= user.text_field :alive %>
+  <%= user.select :alive, options_for_select(["True", "False"]) %>
 
   <%= user.submit %>
 

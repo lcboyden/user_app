@@ -8,6 +8,6 @@
 
   <h3>Gender: <%= @user.gender %></h3>
 
-  <h3>Alive: <%= @user.alive %></h3>
+  <h3>Alive: <%= @user.alive ? "Yes" : "No" %></h3>
 
 <%= link_to 'Back', users_path %>
